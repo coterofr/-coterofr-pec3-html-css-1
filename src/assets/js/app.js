@@ -109,4 +109,33 @@ _viewMore(".read-more-present-bio", "read-less-text-present-bio", ".read-less-pr
 /* Leer menos biografía de presentación */
 
 _viewLess(".read-less-present-bio", "read-less-text-present-bio", ".read-more-present-bio");
+
+
+/* Gestionar videos de la aplicación */
+
+function _viewVideo(id, idVideo, width, height) {
+  let video = document.getElementById(id);
+
+  video.addEventListener("click", event => {
+    let figure = video.parentElement;
+
+    video.classList.add("is-hidden");
+
+    let iframe = document.createElement("iframe");
+    iframe.setAttribute("src", "https://www.youtube.com/embed/" + idVideo);
+    iframe.setAttribute("width", width);
+    iframe.setAttribute("height", height);
+    iframe.setAttribute("loading", "lazy");
+
+    figure.replaceChild(iframe, video);
+  });
+}
+
+/* Gestionar el video del detalle */
+
+_viewVideo("video_GiJPYfM_qOk", "GiJPYfM_qOk", "350px", "250px");
+
+/* Gestionar el video de la presentación */
+
+_viewVideo("video_MLJyFzdQfK8", "MLJyFzdQfK8", "600px", "350px");
   
