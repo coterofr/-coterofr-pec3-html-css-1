@@ -5,6 +5,80 @@
     <title>PEC 3 Herramientas HTML y CSS UOC</title>
 
     <style type="text/css">
+        /**
+         * Google fonts import
+         */
+        
+        @import "https://fonts.googleapis.com/css?family=Inter:400,500,700";
+        
+        /**
+         * Fontawesome styles
+         */
+        
+        .fa {
+            font-family: var(--fa-style-family,"Font Awesome 6 Free");
+            font-weight: var(--fa-style,900)
+        }
+
+        .fa,.fas,.fa-solid,.far,.fa-regular,.fal,.fa-light,.fat,.fa-thin,.fad,.fa-duotone,.fab,.fa-brands {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: var(--fa-display,inline-block);
+            font-variant: normal;
+            text-rendering: auto;
+            font-style: normal;
+            line-height: 1
+        }
+
+        .fa-circle-info::before,.fa-info-circle::before {
+            content: "\f05a"
+        }
+
+        .fa-cookie::before {
+            content: "\f563"
+        }
+
+        .fa-copyright::before {
+            content: "\f1f9"
+        }
+
+        .fa-shield::before {
+            content: "\f132"
+        }
+
+        .fa-triangle-exclamation::before,.fa-exclamation-triangle::before,.fa-warning::before {
+            content: "\f071"
+        }
+
+        :root,:host {
+            --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands"
+        }
+
+        :root,:host {
+            --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free"
+        }
+
+        :root,:host {
+            --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free"
+        }
+
+        .fas,.fa-solid {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900
+        }
+
+        @font-face {
+            font-family: "Font Awesome 6 Free";
+            font-style: normal;
+            font-weight: 900;
+            font-display: block;
+            src: url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2") format("woff2"), url("../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf") format("truetype");
+        }
+
+        /**
+         * Index styles
+         */
+        
         .img-bg {
             -webkit-clip-path: polygon(0% 5%,10% 10%,20% 5%,30% 10%,38% 5%,46% 10%,50% 0%,54% 10%,62% 5%,70% 10%,80% 5%,90% 10%,100% 5%,98% 15%,100% 20%,98% 25%,100% 30%,98% 35%,100% 40%,98% 45%,100% 50%,98% 55%,100% 60%,98% 65%,100% 70%,98% 75%,100% 80%,98% 85%,100% 95%,90% 90%,80% 95%,70% 90%,62% 95%,54% 90%,50% 100%,46% 90%,38% 95%,30% 90%,20% 95%,10% 90%,0% 95%,2% 85%,0% 80%,2% 75%,0% 70%,2% 65%,0% 60%,2% 55%,0% 50%,2% 45%,0% 40%,2% 35%,0% 30%,2% 25%,0% 20%,2% 15%);
             clip-path: polygon(0% 5%,10% 10%,20% 5%,30% 10%,38% 5%,46% 10%,50% 0%,54% 10%,62% 5%,70% 10%,80% 5%,90% 10%,100% 5%,98% 15%,100% 20%,98% 25%,100% 30%,98% 35%,100% 40%,98% 45%,100% 50%,98% 55%,100% 60%,98% 65%,100% 70%,98% 75%,100% 80%,98% 85%,100% 95%,90% 90%,80% 95%,70% 90%,62% 95%,54% 90%,50% 100%,46% 90%,38% 95%,30% 90%,20% 95%,10% 90%,0% 95%,2% 85%,0% 80%,2% 75%,0% 70%,2% 65%,0% 60%,2% 55%,0% 50%,2% 45%,0% 40%,2% 35%,0% 30%,2% 25%,0% 20%,2% 15%)
@@ -15,6 +89,10 @@
             clip-path: inset(50px 20px round 20px)
         }
 
+        /**
+         * Html styles
+         */
+        
         html {
             font-size: 15px
         }
@@ -30,6 +108,10 @@
             margin: 0 auto
         }
 
+        /**
+         * Header styles
+         */
+        
         header {
             width: 100%;
             color: #fafafa;
@@ -65,11 +147,6 @@
             display: block
         }
 
-        header .img-header:hover {
-            border: .5px solid #aaa;
-            box-shadow: 3px 7px 15px #5c5858
-        }
-
         header nav {
             padding-top: 20px;
             padding-bottom: 20px
@@ -94,11 +171,6 @@
             font-size: 1.1rem
         }
 
-        header a:hover {
-            border-bottom: none;
-            font-weight: 500
-        }
-
         header a.active {
             color: #3e9fd6;
             font-weight: 700
@@ -110,42 +182,10 @@
             }
         }
 
-        @media only screen and (max-width: 700px) {
-            header {
-                justify-content:center;
-                align-items: center;
-                position: static
-            }
-
-            header div {
-                width: 90%;
-                text-align: center;
-                padding-top: 20px
-            }
-
-            header .img-header {
-                width: 250px;
-                height: 160px;
-                margin: 0 auto
-            }
-
-            header nav {
-                width: 90%;
-                padding-top: 10px;
-                padding-bottom: 15px
-            }
-
-            header nav ul {
-                flex-direction: column;
-                justify-content: center
-            }
-
-            header nav ul li:nth-of-type(1),header nav ul li:nth-of-type(2),header nav ul li:nth-of-type(3) {
-                padding-bottom: 3px;
-                padding-right: 0
-            }
-        }
-
+        /**
+         * Footer styles
+         */
+        
         footer {
             width: 100%;
             color: #fafafa;
@@ -181,11 +221,6 @@
             display: block
         }
 
-        footer .nav-main .img-footer:hover {
-            border: .5px solid #aaa;
-            box-shadow: 3px 7px 15px #5c5858
-        }
-
         footer .nav-main .nav-pages {
             padding-top: 20px;
             padding-bottom: 20px
@@ -210,11 +245,6 @@
             font-size: 1.1rem
         }
 
-        footer .nav-main a:hover {
-            border-bottom: none;
-            font-weight: 500
-        }
-
         footer .nav-main a.active {
             color: #3e9fd6;
             font-weight: 700
@@ -226,51 +256,11 @@
             }
         }
 
-        @media only screen and (max-width: 700px) {
-            footer .nav-main {
-                justify-content:center;
-                align-items: center
-            }
-
-            footer .nav-main .logo {
-                width: 90%;
-                text-align: center;
-                padding-top: 20px
-            }
-
-            footer .nav-main .img-footer {
-                width: 160px;
-                height: 110px;
-                margin: 0 auto
-            }
-
-            footer .nav-main .nav-pages {
-                width: 90%;
-                padding-top: 10px;
-                padding-bottom: 15px
-            }
-
-            footer .nav-main .nav-pages ul {
-                flex-direction: column;
-                justify-content: center
-            }
-
-            footer .nav-main .nav-pages ul li:nth-of-type(1),footer .nav-main .nav-pages ul li:nth-of-type(2),footer .nav-main .nav-pages ul li:nth-of-type(3) {
-                padding-bottom: 3px;
-                padding-right: 0
-            }
-        }
-
         footer .nav-policy,footer .copyright {
             width: 70%;
             text-align: left;
             color: #fafafa;
             margin: 0 auto
-        }
-
-        footer .nav-policy a:hover,footer .copyright a:hover {
-            border-bottom: none;
-            font-weight: 400
         }
 
         footer .nav-policy {
@@ -310,46 +300,10 @@
             }
         }
 
-        @media only screen and (max-width: 700px) {
-            footer .nav-policy {
-                width:90%
-            }
-
-            footer .nav-policy ul:first-child {
-                flex-direction: column;
-                justify-content: center
-            }
-
-            footer .nav-policy ul:first-child>li:nth-of-type(1),footer .nav-policy ul:first-child>li:nth-of-type(2),footer .nav-policy ul:first-child>li:nth-of-type(3) {
-                padding-bottom: 3px;
-                padding-right: 0
-            }
-
-            footer .nav-policy ul:first-child>li:nth-of-type(2):before,footer .nav-policy ul:first-child>li:nth-of-type(3):before,footer .nav-policy ul:first-child>li:nth-of-type(4):before {
-                content: "";
-                padding-right: 0
-            }
-
-            footer .nav-policy ul:last-child {
-                text-align: center
-            }
-
-            footer .copyright {
-                width: 90%;
-                text-align: center
-            }
-        }
-
         footer .policy,footer .social-media {
             margin: 0;
             padding-left: 0;
             list-style-type: none
-        }
-
-        footer .social-media img:hover {
-            opacity: .9;
-            background-color: #3e9fd6;
-            border-radius: 50px
         }
 
         footer .copyright {
@@ -357,6 +311,10 @@
             padding-bottom: 20px
         }
 
+        /**
+         * Index styles
+         */
+        
         main {
             width: 100%;
             color: #fafafa;
@@ -379,35 +337,13 @@
             }
         }
 
-        @media only screen and (max-width: 700px) {
-            section {
-                width:90%;
-                margin: 20px auto;
-                padding: 15px
-            }
-        }
-
-        section:hover {
-            box-shadow: 3px 7px 15px #5c5858
-        }
-
         article {
             padding: 30px
-        }
-
-        article:hover {
-            box-shadow: 3px 7px 15px #5c5858
         }
 
         @media only screen and (max-width: 1100px) {
             article {
                 padding:20px
-            }
-        }
-
-        @media only screen and (max-width: 700px) {
-            article {
-                padding:15px
             }
         }
 
@@ -417,22 +353,10 @@
             text-decoration: none
         }
 
-        a:hover {
-            color: #3e9fd6;
-            border-bottom: 2px solid #3e9fd6;
-            font-weight: 700
-        }
-
         h1 {
             margin-top: 10px;
             padding-bottom: 20px;
             font-size: 1.5rem
-        }
-
-        @media only screen and (max-width: 700px) {
-            h1,h2 {
-                text-align:center
-            }
         }
 
         p {
