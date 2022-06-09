@@ -648,20 +648,11 @@
         }
 
         .list-item-img img {
-            width: 200px;
-            height: 150px;
             object-fit: cover;
             object-position: center;
             border: 1px solid #aaa;
             border-radius: 10px;
             margin-right: 15px
-        }
-
-        @media only screen and (max-width: 700px) {
-            .list-item-img img {
-                width:300px;
-                height: 200px
-            }
         }
 
         .list-item-description {
@@ -723,21 +714,11 @@
         }
 
         .legacy-img img {
-            width: 150px;
-            height: 150px;
             object-fit: cover;
             object-position: center;
             border: 1px solid #aaa;
             border-radius: 10px;
             margin-right: 15px
-        }
-
-        @media only screen and (max-width: 700px) {
-            .legacy-img img {
-                width:300px;
-                height: 200px;
-                margin-left: 15px
-            }
         }
 
         .legacy-description {
@@ -972,9 +953,9 @@
                 <p>El <span class="bold">Rey Ragnar Lothbrok fue un poderoso guerrero vikingo y fundador de la <span class="italic">Casa Lothbrok</span></span>, que cree que está destinado a la grandeza. Él esta impulsado no sólo por su sed de batalla y gloria, sino también por su sed de conocimiento y la naturaleza inquisitiva.</p>
                 
                 <figure class="category-detail-img-right">
-                    <img srcset="../assets/img/others/ragnar-350w.png,
-                                 ../assets/img/others/ragnar-400w.png 1.5x"
-                        src="../assets/img/others/ragnar-350w.png"
+                    <img srcset="../assets/img/others/ragnar-350w.webp,
+                                 ../assets/img/others/ragnar-400w.webp 1.5x"
+                        src="../assets/img/others/ragnar-350w.webp"
                         loading="lazy" 
                         alt="Ragnar Lothbrok">
                     <figcaption>Ragnar Lothbrok como conde en una batalla</figcaption>
@@ -984,8 +965,8 @@
                 
                 <picture class="category-detail-picture">
                     <source type="image/webp" 
-                            srcset="../assets/img/others/ragnar-350w.webp 350w,
-                                    ../assets/img/others/ragnar-400w.webp 400w"
+                            srcset="../assets/img/others/ragnar-2-350w.webp 350w,
+                                    ../assets/img/others/ragnar-2-400w.webp 400w"
                             sizes="(max-width: 700px) 350px, 400px">
                     <source type="image/png" 
                             srcset="../assets/img/others/ragnar-2-350w.png 350w,
@@ -999,11 +980,11 @@
                 <p class="read-less-text-about is-hidden">En su lecho de muerte cantó el himno nórdico y le prometió la venganza por parte de sus hijos. Tiempo después, el Gran Ejército Heathen dirigido por los innumerables hijos del legendario vikingo, invadieron Northumbria y mataron al Rey Aella en el año 866. El legado de Ragnar Lodbrok se perpetuó y sus descendientes continuaron revestidos del poder de su padre, tuvieron un impacto en la organización militar de la región, en especial en su segundo hijo Ivar el Deshuesado. <span class="read-less-about">Leer menos...</span></p>
 
                 <figure class="category-detail-img-right">
-                    <img srcset="../assets/img/others/vikings-350w.png 350w,
-                                 ../assets/img/others/vikings-400w.png 400w"
+                    <img srcset="../assets/img/others/vikings-350w.webp 350w,
+                                 ../assets/img/others/vikings-400w.webp 400w"
                         sizes="(min-width: 701px) 400px, 
                                (max-width: 700px) 350px"
-                        src="../assets/img/others/vikings-350w.png"
+                        src="../assets/img/others/vikings-350w.webp"
                         loading="lazy" 
                         alt="Ragnar Lothbrok">
                     <figcaption>Imagen de la representación de vikingos</figcaption>
@@ -1038,7 +1019,11 @@
                 <ul class="category-detail-list">
                     <li class="category-detail-list-item">
                         <figure class="list-item-img">
-                            <img src="../assets/img/others/baltic.jpg" width="200px" height="150px" loading="lazy" alt="Baltico">
+                            <img srcset="../assets/img/others/baltic-200w.jpg 200w,
+                                         ../assets/img/others/baltic-300w.jpg 300w"
+                            sizes="(max-width: 700px) 300px, 200px"
+                            src="../assets/img/others/baltic-200w.jpg"  
+                            alt="Baltico">
                             <figcaption></figcaption>
                         </figure>
 
@@ -1057,7 +1042,11 @@
 
                     <li class="category-detail-list-item">
                         <figure class="list-item-img">
-                            <img src="../assets/img/others/france.jpg" width="200px" height="150px" loading="lazy" alt="Baltico">
+                            <img srcset="../assets/img/others/france-200w.jpg 200w,
+                                         ../assets/img/others/france-300w.jpg 300w"
+                            sizes="(max-width: 700px) 300px, 200px"
+                            src="../assets/img/others/france-200w.jpg"  
+                            alt="Francia">
                             <figcaption></figcaption>
                         </figure>
 
@@ -1079,7 +1068,7 @@
 
                     <li class="category-detail-list-item view-less is-hidden">
                         <figure class="list-item-img">
-                            <img src="../assets/img/others/england.jpg" width="200px" height="150px" loading="lazy" alt="Baltico">
+                            <img src="../assets/img/others/england.jpg" width="200px" height="150px" loading="lazy" alt="England">
                             <figcaption></figcaption>
                         </figure>
 
@@ -1108,7 +1097,11 @@
 
                 <div class="legacy">
                     <figure class="legacy-img">
-                        <img src="../assets/img/others/ivar.jpg" width="150px" height="150px" loading="lazy" alt="Ivar">
+                        <img srcset="../assets/img/others/ivar-150w.jpg 150w,
+                                     ../assets/img/others/ivar-300w.jpg 300w"
+                        sizes="(max-width: 700px) 300px, 150px"
+                        src="../assets/img/others/ivar-150w.jpg"
+                        alt="Ivar">
                         <figcaption></figcaption>
                     </figure>
 
@@ -1127,7 +1120,11 @@
 
                 <div class="legacy">
                     <figure class="legacy-img">
-                        <img src="../assets/img/others/bjorn.jpg" width="150px" height="150px" loading="lazy" alt="Björn">
+                        <img srcset="../assets/img/others/bjorn-150w.jpg 150w,
+                                     ../assets/img/others/bjorn-300w.jpg 300w"
+                        sizes="(max-width: 700px) 300px, 150px"
+                        src="../assets/img/others/bjorn-150w.jpg"
+                        alt="Björn">
                         <figcaption></figcaption>
                     </figure>
 
@@ -1146,7 +1143,11 @@
 
                 <div class="legacy">
                     <figure class="legacy-img">
-                        <img src="../assets/img/others/ubbe.jpg" width="150px" height="150px" loading="lazy" alt="Ubbe">
+                        <img srcset="../assets/img/others/ubbe-150w.jpg 150w,
+                                     ../assets/img/others/ubbe-300w.jpg 300w"
+                        sizes="(max-width: 700px) 300px, 150px"
+                        src="../assets/img/others/ubbe-150w.jpg"
+                        alt="Ubbe">
                         <figcaption></figcaption>
                     </figure>
 
