@@ -116,19 +116,21 @@ _viewLess(".read-less-present-bio", "read-less-text-present-bio", ".read-more-pr
 function _viewVideo(id, idVideo, width, height) {
   let video = document.getElementById(id);
 
-  video.addEventListener("click", event => {
-    let figure = video.parentElement;
-
-    video.classList.add("is-hidden");
-
-    let iframe = document.createElement("iframe");
-    iframe.setAttribute("src", "https://www.youtube.com/embed/" + idVideo);
-    iframe.setAttribute("width", width);
-    iframe.setAttribute("height", height);
-    iframe.setAttribute("loading", "lazy");
-
-    figure.replaceChild(iframe, video);
-  });
+  if(video) {
+    video.addEventListener("click", event => {
+      let figure = video.parentElement;
+  
+      video.classList.add("is-hidden");
+  
+      let iframe = document.createElement("iframe");
+      iframe.setAttribute("src", "https://www.youtube.com/embed/" + idVideo);
+      iframe.setAttribute("width", width);
+      iframe.setAttribute("height", height);
+      iframe.setAttribute("loading", "lazy");
+  
+      figure.replaceChild(iframe, video);
+    });
+  }
 }
 
 /* Gestionar el video del detalle */
